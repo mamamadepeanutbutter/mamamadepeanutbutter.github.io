@@ -178,7 +178,7 @@ send("New order from Mamamade peanuts\n"+l.join("\n")+"\nTotal: "+kes(t)+"\nName
 function send(t){var u="https://wa.me/"+WA+"?text="+encodeURIComponent(t);$("wamsg").value=t;$("waopen").href=u;$("wa").hidden=false;try{window.open(u,"_blank")}catch(x){}}
 $("wacopy").onclick=function(){var b=$("wacopy"),m=$("wamsg");function ok(){b.textContent="Copied ✓";setTimeout(function(){b.textContent="Copy message"},1400)}function fb(){m.select();try{document.execCommand("copy");ok()}catch(x){alert("Press and hold the text, then choose Copy.")}}try{navigator.clipboard.writeText(m.value).then(ok,fb)}catch(x){fb()}};
 $("waclose").onclick=function(){$("wa").hidden=true};
-var API=""; // paste your Google Apps Script web app URL here (see setup guide)
+var API="https://script.google.com/macros/s/AKfycbx7VYuMo7r6URtZjeqmM9Hrof6LMx5lcc5IT0kehDNb59TOM-cml3T9XmqACwGhVdkj/exec"; // paste your Google Apps Script web app URL here (see setup guide)
 var DEF=P.slice(),pEdit=null,tab="r";
 var DK="demo1234",AK="",editId=null,rate=0;
 function ls(){try{return JSON.parse(localStorage.getItem("mm_reviews")||"[]")}catch(x){return[]}}
